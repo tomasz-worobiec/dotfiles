@@ -1,0 +1,31 @@
+
+.system-menu {
+	padding: 5px;
+	border-style: none;
+
+}
+.system-menu-container {
+	min-width: 300px;
+	background-color: #1B1B1B;
+	color: #F3F3F3;
+	border-style: solid;
+	border-color: #F3F3F3;
+	border-width: 1px;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.system-menu-power-module-container {
+	padding: 0px 18px 0px 18px;
+}
+
+.system-menu-power-module-button {
+	padding: 0px;
+	min-width: 40px;
+	min-height: 40px;
+	border-radius: 20px;
+}
+
+.system-menu-power-module-button-icon {
+}

@@ -1,0 +1,49 @@
+.media-player-container {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	background-color: #1B1B1B;
+	color: #F3F3F3;
+}
+
+.media-player-thumbnail-overlay {
+	border-radius: 100px;
+	min-width: 200px;
+	min-height: 200px;
+}
+
+.media-player-thumbnail-image {
+	font-size: 400px;
+}
+
+.media-player-title {
+	font-size: 16px;
+}
+
+.media-player-author {
+	font-size: 14px;
+}
+
+.media-player-control-container {
+	min-height: 50px;
+	padding: 0px 0px 5px 0px;
+}
+
+.media-player-control-navigation {
+	padding: 0px;
+	min-width: 36px;
+	min-height: 36px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 18px;
+}
+
+.media-player-control-play-pause {
+	padding: 0px;
+	min-width: 50px;
+	min-height: 50px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 25px;
+	margin: 0px 10px 0px 10px;
+}

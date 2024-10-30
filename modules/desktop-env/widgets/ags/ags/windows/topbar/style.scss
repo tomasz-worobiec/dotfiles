@@ -1,0 +1,106 @@
+button {
+	background-image: none;
+	box-shadow: 0px 0px;
+}
+
+.container {
+	padding: 5px 5px 0px 5px;
+	font-family: CommitMono Nerd Font Mono;
+	border-style: none;
+}
+
+.workspaces button {
+	min-width: 25px;
+	min-height: 25px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 0px;
+	font-size: 12px;
+}
+
+.workspaces button.active {
+	background-color: #1B1B1B;
+	border-color: #F3F3F3;
+	color: #F3F3F3;
+}
+
+.workspaces button.inactive {
+	background-color: #F3F3F3;
+	border-color: #1B1B1B;
+	color: #1B1B1B;
+}
+
+.clock {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 0px 5px 0px 5px;
+	background-color: #1B1B1B;
+	border-color: #F3F3F3;
+	color: #F3F3F3;
+}
+
+.system-button {
+	min-width: 25px;
+	min-height: 25px;
+	padding: 0px 0px 0px 0px;
+	background-color: #6C71C4;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	border-color: #F3F3F3;
+	color: #F3F3F3;
+	font-size: 22px;
+}
+
+.module {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+}
+
+.module-icon {
+	min-width: 25px;
+	min-height: 25px;
+	padding: 0px 0px 0px 0px;
+	background-color: transparent;
+	font-family: CommitMono Nerd Font;
+	font-size: 14px;
+	color: #F3F3F3;
+}
+
+.module-content {
+	min-width: 35px;
+	padding: 0px 5px 0px 5px;
+	background-color: #1B1B1B;
+	border-radius: 0px 5px 5px 0px;
+	font-family: CommitMono Nerd Font;
+	font-size: 14px;
+	color: #F3F3F3;
+}
+
+.module-button {
+	padding: 0px;
+	border-style: none;
+}
+
+.module-battery {
+	background-color: #dd8daa;
+}
+
+.module-volume {
+	background-color: #90b0dd;
+}
+
+.media-module {
+	min-width: 400px;
+	padding: 0px 5px 0px 5px;
+	background-color: #1B1B1B;
+	color: #F3F3F3;
+}
+
+.media-module-label {
+	font-family: CommitMono Nerd Font;
+	font-size: 14px;
+}

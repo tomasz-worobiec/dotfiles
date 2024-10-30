@@ -1,0 +1,5 @@
+require('tom.lsp.omnisharp')
+require('tom.lsp.clangd')
+require('tom.lsp.lua-language-server')
+require('tom.lsp.rust-analyzer')
+require('tom.lsp.nil')
