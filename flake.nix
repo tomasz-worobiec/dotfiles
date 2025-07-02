@@ -6,10 +6,16 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     disko,
+    home-manager,
     nixpkgs,
     ...
   }:
@@ -26,6 +32,15 @@
           ./configuration.nix
         ];
         specialArgs = { inherit pkgs; };
+      };
+    };
+
+    homeConfigurations = {
+      tom = home-manager.lib.homeManagerConfiguration {
+        modules = [
+          ./home.nix
+        ];
+        inherit pkgs;
       };
     };
   };
