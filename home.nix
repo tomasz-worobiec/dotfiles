@@ -6,6 +6,10 @@ let
   username = "tom";
 in
 {
+  imports = [
+    ./home/neovim.nix
+  ];
+
   home = {
     username = "${username}";
     homeDirectory = "/home/${username}";
