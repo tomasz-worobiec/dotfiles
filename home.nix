@@ -27,5 +27,9 @@ in
     ripgrep.enable = true;
   };
 
+  home.packages = with pkgs; [
+    nil
+  ];
+
   home.stateVersion = "25.05";
 }
