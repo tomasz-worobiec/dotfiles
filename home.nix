@@ -19,6 +19,7 @@ in
 
   programs = {
     bat.enable = true;
+    fzf.enable = true;
     home-manager.enable = true;
     lazygit.enable = true;
   };
