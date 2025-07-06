@@ -18,6 +18,7 @@ in
   };
 
   programs = {
+    bat.enable = true;
     home-manager.enable = true;
     lazygit.enable = true;
   };
