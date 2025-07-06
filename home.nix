@@ -22,6 +22,7 @@ in
     fzf.enable = true;
     git.enable = true;
     home-manager.enable = true;
+    htop.enable = true;
     lazygit.enable = true;
   };
 
