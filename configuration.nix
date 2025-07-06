@@ -18,11 +18,17 @@
     lshw
   ];
 
-  users.users.tom = {
-    isNormalUser = true;
-    initialPassword = "";
-    extraGroups = [ "wheel" ];
-    useDefaultShell = true;
+  programs.zsh.enable = true;
+
+  users = {
+    defaultUserShell = pkgs.zsh;
+
+    users.tom = {
+      isNormalUser = true;
+      initialPassword = "";
+      extraGroups = [ "wheel" ];
+      useDefaultShell = true;
+    };
   };
 
   networking.hostName = "lynx";
