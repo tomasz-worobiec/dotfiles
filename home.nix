@@ -24,6 +24,7 @@ in
     home-manager.enable = true;
     htop.enable = true;
     lazygit.enable = true;
+    ripgrep.enable = true;
   };
 
   home.stateVersion = "25.05";
