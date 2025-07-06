@@ -15,6 +15,7 @@
   environment.systemPackages = with pkgs; [
     git
     wget
+    lshw
   ];
 
   users.users.tom = {
