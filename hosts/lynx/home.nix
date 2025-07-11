@@ -7,9 +7,9 @@ let
 in
 {
   imports = [
-    ./home/neovim.nix
-    ./home/tmux.nix
-    ./home/zsh.nix
+    ../../home/neovim.nix
+    ../../home/tmux.nix
+    ../../home/zsh.nix
   ];
 
   home = {

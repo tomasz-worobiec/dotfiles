@@ -28,8 +28,8 @@
       lynx = nixpkgs.lib.nixosSystem {
         modules = [
           disko.nixosModules.disko
-          ./disk-config.nix
-          ./configuration.nix
+          ./hosts/lynx/disk-config.nix
+          ./hosts/lynx/configuration.nix
         ];
         specialArgs = { inherit pkgs; };
       };
@@ -38,7 +38,7 @@
     homeConfigurations = {
       tom = home-manager.lib.homeManagerConfiguration {
         modules = [
-          ./home.nix
+          ./hosts/lynx/home.nix
         ];
         inherit pkgs;
       };
