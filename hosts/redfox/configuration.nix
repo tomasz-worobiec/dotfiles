@@ -26,12 +26,15 @@
     users.tom = {
       isNormalUser = true;
       initialPassword = "";
-      extraGroups = [ "wheel" ];
+      extraGroups = [ "wheel" "networkmanager" ];
       useDefaultShell = true;
     };
   };
 
-  networking.hostName = "redfox";
+  networking = {
+    hostName = "redfox";
+    networkmanager.enable = true;
+  };
 
   services.openssh.enable = true;
 
