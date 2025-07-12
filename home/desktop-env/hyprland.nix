@@ -21,6 +21,7 @@ in
 {
   imports = [
     ./dunst.nix
+    ./rofi
     ./waybar.nix
   ];
 
@@ -42,6 +43,7 @@ in
       bind = [
         # Starting programs
         "$mod, T, exec, alacritty"
+
         # Window management
         "$mod, Q, killactive"
         "$mod, F, fullscreen"
