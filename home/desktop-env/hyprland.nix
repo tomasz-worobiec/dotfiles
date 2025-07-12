@@ -21,6 +21,7 @@ in
 {
   imports = [
     ./dunst.nix
+    ./hyprpaper.nix
     ./rofi
     ./waybar.nix
   ];
