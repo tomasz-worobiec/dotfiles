@@ -20,6 +20,7 @@ let
 in
 {
   imports = [
+    ./dunst.nix
     ./waybar.nix
   ];
 
