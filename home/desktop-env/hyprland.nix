@@ -19,6 +19,10 @@ let
   generatedBindings = builtins.concatLists allWsBindings;
 in
 {
+  imports = [
+    ./waybar.nix
+  ];
+
   home.packages = with pkgs; [
     brightnessctl
     wl-clipboard
