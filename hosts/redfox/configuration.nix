@@ -5,6 +5,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../system/greetd.nix
   ];
 
   boot.loader = {
