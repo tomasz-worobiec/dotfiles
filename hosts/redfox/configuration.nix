@@ -21,6 +21,11 @@
 
   programs.zsh.enable = true;
 
+  environment.sessionVariables = {
+    # Force Electron to use Wayland
+    NIXOS_OZONE_WL = "1";
+  };
+
   users = {
     defaultUserShell = pkgs.zsh;
 
