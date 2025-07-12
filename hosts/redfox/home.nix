@@ -19,6 +19,7 @@ in
   };
 
   programs = {
+    alacritty.enable = true;
     bat.enable = true;
     fzf.enable = true;
     git.enable = true;

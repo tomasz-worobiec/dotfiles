@@ -31,9 +31,12 @@ in
     systemd.enable = true;
 
     settings = {
+      "$terminal" = "alacritty";
       "$mod" = "SUPER";
 
       bind = [
+        # Starting programs
+        "$mod, T, exec, alacritty"
         # Window management
         "$mod, Q, killactive"
         "$mod, F, fullscreen"
