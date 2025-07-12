@@ -45,9 +45,11 @@
   in
   {
     nixosConfigurations = {}
-      // (mkConfiguration "lynx");
+      // (mkConfiguration "lynx")
+      // (mkConfiguration "redfox");
 
     homeConfigurations = {}
-      // (mkHome "tom" "lynx");
+      // (mkHome "tom" "lynx")
+      // (mkHome "tom" "redfox");
   };
 }
