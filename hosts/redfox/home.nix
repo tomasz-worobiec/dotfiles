@@ -21,6 +21,10 @@ in
   programs = {
     alacritty.enable = true;
     bat.enable = true;
+    chromium = {
+      enable = true;
+      package = pkgs.brave;
+    };
     firefox.enable = true;
     fzf.enable = true;
     git.enable = true;
