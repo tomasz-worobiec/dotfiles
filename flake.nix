@@ -22,26 +22,32 @@
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
-  in
-  {
-    nixosConfigurations = {
-      lynx = nixpkgs.lib.nixosSystem {
+
+    mkConfiguration = hostname: {
+      "${hostname}" = nixpkgs.lib.nixosSystem {
         modules = [
           disko.nixosModules.disko
-          ./hosts/lynx/disk-config.nix
-          ./hosts/lynx/configuration.nix
+          ./hosts/${hostname}/disk-config.nix
+          ./hosts/${hostname}/configuration.nix
         ];
         specialArgs = { inherit pkgs; };
       };
     };
 
-    homeConfigurations = {
-      tom = home-manager.lib.homeManagerConfiguration {
+    mkHome = username: hostname: {
+      "${username}@${hostname}" = home-manager.lib.homeManagerConfiguration {
         modules = [
-          ./hosts/lynx/home.nix
+          ./hosts/${hostname}/home.nix
         ];
         inherit pkgs;
       };
     };
+  in
+  {
+    nixosConfigurations = {}
+      // (mkConfiguration "lynx");
+
+    homeConfigurations = {}
+      // (mkHome "tom" "lynx");
   };
 }
