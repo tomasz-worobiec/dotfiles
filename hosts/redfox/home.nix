@@ -10,6 +10,7 @@ in
     ../../home/neovim.nix
     ../../home/tmux.nix
     ../../home/zsh.nix
+    ../../home/desktop-env/hyprland.nix
   ];
 
   home = {
