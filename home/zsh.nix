@@ -39,17 +39,17 @@
       {
         name = "fzf-tab";
         src = pkgs.zsh-fzf-tab;
-        file = "fzf-tab.zsh";
+        file = "share/fzf-tab/fzf-tab.plugin.zsh";
       }
       {
         name = "autosuggestions";
         src = pkgs.zsh-autosuggestions;
-        file = "zsh-autosuggestions.zsh";
+        file = "share/zsh-autosuggestion/zsh-autosuggestions.zsh";
       }
       {
         name = "vi-mode";
         src = pkgs.zsh-vi-mode;
-        file = "zsh-vi-mode.plugin.zsh";
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
       }
       {
         name = "bureau";
