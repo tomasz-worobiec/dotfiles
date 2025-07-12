@@ -21,6 +21,7 @@ in
   programs = {
     alacritty.enable = true;
     bat.enable = true;
+    firefox.enable = true;
     fzf.enable = true;
     git.enable = true;
     home-manager.enable = true;
