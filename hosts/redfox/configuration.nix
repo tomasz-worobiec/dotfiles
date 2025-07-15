@@ -1,5 +1,6 @@
 {
   pkgs,
+  colorScheme,
   ...
 }:
 {
@@ -19,7 +20,10 @@
     lshw
   ];
 
-  programs.zsh.enable = true;
+  programs = {
+    dconf.enable = true;
+    zsh.enable = true;
+  };
 
   environment.sessionVariables = {
     # Force Electron to use Wayland
@@ -37,6 +41,10 @@
     };
   };
 
+  fonts.packages = with pkgs; [
+    nerd-fonts._0xproto
+  ];
+
   networking = {
     hostName = "redfox";
     networkmanager.enable = true;
@@ -45,6 +53,17 @@
   services.openssh.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  stylix = {
+    enable = true;
+    autoEnable = false;
+    base16Scheme = "${colorScheme}";
+    polarity = "dark";
+
+    targets = {
+      chromium.enable = true;
+    };
+  };
 
   system.stateVersion = "25.05";
 }
