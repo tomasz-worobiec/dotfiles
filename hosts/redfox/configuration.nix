@@ -14,6 +14,9 @@
     efi.canTouchEfiVariables = false;
   };
 
+  hardware.bluetooth.enable = true;
+  services.pipewire.pulse.enable = true;
+
   environment.systemPackages = with pkgs; [
     git
     wget
