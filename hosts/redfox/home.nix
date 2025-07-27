@@ -1,11 +1,9 @@
 {
   pkgs,
   colorScheme,
+  username,
   ...
 }:
-let
-  username = "tom";
-in
 {
   imports = [
     ../../home/neovim.nix

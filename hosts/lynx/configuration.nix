@@ -1,5 +1,6 @@
 {
   pkgs,
+  hostname,
   ...
 }:
 {
@@ -31,7 +32,7 @@
     };
   };
 
-  networking.hostName = "lynx";
+  networking.hostName = "${hostname}";
 
   services.openssh.enable = true;
 

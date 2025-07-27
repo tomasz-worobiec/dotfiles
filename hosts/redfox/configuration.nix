@@ -2,6 +2,7 @@
   pkgs,
   pkgs-unstable,
   colorScheme,
+  hostname,
   ...
 }:
 {
@@ -57,7 +58,7 @@
   ];
 
   networking = {
-    hostName = "redfox";
+    hostName = "${hostname}";
     networkmanager.enable = true;
   };
 

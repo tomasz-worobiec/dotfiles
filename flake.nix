@@ -47,6 +47,7 @@
           inherit pkgs;
           inherit pkgs-unstable;
           inherit colorScheme;
+          inherit hostname;
         };
       };
     };
@@ -60,6 +61,8 @@
         extraSpecialArgs = {
           inherit colorScheme;
           inherit pkgs-unstable;
+          inherit hostname;
+          inherit username;
         };
         inherit pkgs;
       };
