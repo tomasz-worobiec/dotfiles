@@ -2,6 +2,8 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
 
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+
     disko = {
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,12 +24,14 @@
     disko,
     home-manager,
     nixpkgs,
+    nixpkgs-unstable,
     stylix,
     ...
   }:
   let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
+    pkgs-unstable = import nixpkgs-unstable { inherit system; };
 
     colorScheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
 
@@ -41,6 +45,7 @@
         ];
         specialArgs = {
           inherit pkgs;
+          inherit pkgs-unstable;
           inherit colorScheme;
         };
       };
@@ -54,6 +59,7 @@
         ];
         extraSpecialArgs = {
           inherit colorScheme;
+          inherit pkgs-unstable;
         };
         inherit pkgs;
       };
