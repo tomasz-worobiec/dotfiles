@@ -53,6 +53,12 @@ in
       rofi.enable = true;
     };
 
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 20;
+    };
+
     fonts = {
       serif = {
         package = pkgs.nerd-fonts._0xproto;
