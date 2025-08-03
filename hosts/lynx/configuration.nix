@@ -36,6 +36,8 @@
 
   services.openssh.enable = true;
 
+  time.timeZone = "Europe/Warsaw";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "25.05";

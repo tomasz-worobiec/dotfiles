@@ -77,5 +77,7 @@
     };
   };
 
+  time.timeZone = "Europe/Warsaw";
+
   system.stateVersion = "25.05";
 }
