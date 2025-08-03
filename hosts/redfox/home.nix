@@ -34,6 +34,7 @@
   };
 
   home.packages = with pkgs; [
+    baobab
     nil
   ];
 
