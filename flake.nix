@@ -70,10 +70,12 @@
   in
   {
     nixosConfigurations = {}
+      // (mkConfiguration "bison")
       // (mkConfiguration "lynx")
       // (mkConfiguration "redfox");
 
     homeConfigurations = {}
+      // (mkHome "tom" "bison")
       // (mkHome "tom" "lynx")
       // (mkHome "tom" "redfox");
   };
