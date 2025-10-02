@@ -30,6 +30,7 @@
     home-manager.enable = true;
     htop.enable = true;
     lazygit.enable = true;
+    ranger.enable = true;
     ripgrep.enable = true;
   };
 
