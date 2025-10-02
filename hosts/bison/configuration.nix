@@ -24,6 +24,22 @@
     # Temporary switch to unstable bluez. Restore after new release.
     package = pkgs-unstable.bluez;
   };
+
+  hardware.graphics = {
+    enable = true;
+  };
+
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = true;
+    nvidiaSettings = true;
+  };
+
   services.pipewire.pulse.enable = true;
 
   environment.systemPackages = with pkgs; [
