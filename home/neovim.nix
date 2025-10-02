@@ -21,7 +21,7 @@
     source = pkgs.fetchFromGitHub {
       owner = "tomasz-worobiec";
       repo = "neovim-config";
-      rev = "13312859680ada848a8b4e93e41cd4a0f465b248";
+      rev = "0f7abac168bc624b94f6764859ddbe70c473e931";
       sha256 = "sha256-PYGq6zyQuXHC7mqkdHRuBqTC0FpyiT4dS+jXBVxdtxw=";
     };
   };
