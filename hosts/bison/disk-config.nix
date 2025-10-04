@@ -29,7 +29,7 @@
                 };
                 content = {
                   type = "lvm_pv";
-                  vg = "lynx";
+                  vg = "bison";
                 };
                 extraFormatArgs = [ "--label=LUKS" ];
               };
@@ -39,7 +39,7 @@
       };
     };
     lvm_vg = {
-      lynx = {
+      bison = {
         type = "lvm_vg";
         lvs = {
           root = {
