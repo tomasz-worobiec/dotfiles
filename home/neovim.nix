@@ -23,7 +23,7 @@
       owner = "tomasz-worobiec";
       repo = "neovim-config";
       rev = "0f7abac168bc624b94f6764859ddbe70c473e931";
-      sha256 = "sha256-PYGq6zyQuXHC7mqkdHRuBqTC0FpyiT4dS+jXBVxdtxw=";
+      sha256 = "sha256-r3CVhuNJggDKLOpzto30iOFrxVxmq1LFJnCwcNjHSns=";
     };
   };
 }
