@@ -49,6 +49,12 @@ in
         "$mod, Q, killactive"
         "$mod, F, fullscreen"
 
+        # Window resizing
+        "$mod SHIFT, l, resizeactive, 10 0"
+        "$mod SHIFT, h, resizeactive, -10 0"
+        "$mod SHIFT, k, resizeactive, 0 -10"
+        "$mod SHIFT, j, resizeactive, 0 10"
+
         # Workspace management
         "$mod, bracketleft, workspace, m-1"
         "$mod, bracketright, workspace, m+1"
