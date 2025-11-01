@@ -55,6 +55,12 @@ in
         "$mod SHIFT, k, resizeactive, 0 -10"
         "$mod SHIFT, j, resizeactive, 0 10"
 
+        # Window navigation
+        "$mod, l, movefocus, r"
+        "$mod, h, movefocus, l"
+        "$mod, k, movefocus, u"
+        "$mod, j, movefocus, d"
+
         # Workspace management
         "$mod, bracketleft, workspace, m-1"
         "$mod, bracketright, workspace, m+1"
