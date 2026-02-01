@@ -75,6 +75,10 @@ in
         ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
       ] ++ generatedBindings;
 
+      monitor = [
+        ", preffered, auto, 1.2"
+      ];
+
       general = {
         gaps_in = 2.5;
         gaps_out = 5;

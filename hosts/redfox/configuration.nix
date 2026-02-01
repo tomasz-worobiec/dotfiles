@@ -8,7 +8,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../system/greetd.nix
+    ../../system/sddm.nix
   ];
 
   boot.loader = {
@@ -60,6 +60,33 @@
   networking = {
     hostName = "${hostname}";
     networkmanager.enable = true;
+
+    # useNetworkd = true;
+
+    nat = {
+      enable = true;
+      externalInterface = "wlan0";
+      internalInterfaces = [ "enp0s31f6" ];
+    };
+
+    firewall = {
+      enable = true;
+      allowedUDPPorts = [ 67 ];
+    };
+  };
+
+  systemd.network.networks."10-eth0" = {
+    matchConfig.Name = "enp0s31f6";
+    networkConfig = {
+      Address = "192.168.50.1/24";
+      DHCPServer = true;
+    };
+    dhcpServerConfig = {
+      PoolOffset = 10;
+      PoolSize = 50;
+      EmitDNS = true;
+      DNS = [ "1.1.1.1" "8.8.8.8" ];
+    };
   };
 
   services.openssh.enable = true;

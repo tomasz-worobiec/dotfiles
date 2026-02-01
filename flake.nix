@@ -18,6 +18,12 @@
       url = "github:danth/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs = {
@@ -25,6 +31,7 @@
     home-manager,
     nixpkgs,
     nixpkgs-unstable,
+    plasma-manager,
     stylix,
     ...
   }:
@@ -38,8 +45,8 @@
     mkConfiguration = hostname: {
       "${hostname}" = nixpkgs.lib.nixosSystem {
         modules = [
-          disko.nixosModules.disko
-          ./hosts/${hostname}/disk-config.nix
+          # disko.nixosModules.disko
+          # ./hosts/${hostname}/disk-config.nix
           stylix.nixosModules.stylix
           ./hosts/${hostname}/configuration.nix
         ];
@@ -56,6 +63,7 @@
       "${username}@${hostname}" = home-manager.lib.homeManagerConfiguration {
         modules = [
           stylix.homeModules.stylix
+          plasma-manager.homeModules.plasma-manager
           ./hosts/${hostname}/home.nix
         ];
         extraSpecialArgs = {
