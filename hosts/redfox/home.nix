@@ -34,11 +34,6 @@
     ripgrep.enable = true;
   };
 
-  home.packages = with pkgs; [
-    baobab
-    nil
-  ];
-
   stylix = {
     enable = true;
     autoEnable = false;
