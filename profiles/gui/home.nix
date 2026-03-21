@@ -34,6 +34,7 @@
       fontconfig.enable = true;
       gtk.enable = true;
       rofi.enable = true;
+      helix.enable = true;
     };
 
     cursor = {

@@ -5,7 +5,7 @@
 }:
 {
   imports = [
-    ../../home/neovim.nix
+    ../../home/helix.nix
     ../../home/tmux.nix
     ../../home/zsh.nix
   ];
@@ -22,7 +22,6 @@
   };
 
   home.packages = with pkgs; [
-    nil
     e2fsprogs
   ];
 
