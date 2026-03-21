@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-25.05";
+    nixpkgs.url = "nixpkgs/nixos-25.11";
 
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
@@ -10,12 +10,12 @@
     };
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     stylix = {
-      url = "github:danth/stylix/release-25.05";
+      url = "github:danth/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -30,7 +30,7 @@
   }:
   let
     system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
+    pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
     pkgs-unstable = import nixpkgs-unstable { inherit system; };
 
     colorScheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
