@@ -21,6 +21,8 @@ in
   imports = [
     ./swaync.nix
     ./hyprpaper.nix
+    ./hypridle.nix
+    ./hyprlock.nix
     ./rofi
     ./waybar.nix
   ];
