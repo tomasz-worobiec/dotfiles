@@ -30,9 +30,12 @@ in
     saveLocation = "$HOME/Pictures/Screenshots"; # TODO: screen shots are not saved here
   };
 
+  services.cliphist = {
+    enable = true;
+  };
+
   home.packages = with pkgs; [
     brightnessctl
-    wl-clipboard
   ];
 
   wayland.windowManager.hyprland = {
@@ -84,6 +87,8 @@ in
         "$mod, PRINT, exec, hyprshot -m window -m active"
         "$shiftmod, PRINT, exec, hyprshot -m region"
 
+        # Clipboard
+        "$shiftmod, v, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
       ]
       ++ generatedBindings;
 
