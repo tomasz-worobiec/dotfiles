@@ -1,8 +1,9 @@
 {
+  pkgs,
   ...
 }:
 {
-  services.dunst = {
+  services.swaync = {
     enable = true;
   };
 }

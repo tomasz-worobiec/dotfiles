@@ -19,7 +19,7 @@ let
 in
 {
   imports = [
-    ./dunst.nix
+    ./swaync.nix
     ./hyprpaper.nix
     ./rofi
     ./waybar.nix
