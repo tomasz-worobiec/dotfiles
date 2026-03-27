@@ -25,6 +25,11 @@ in
     ./waybar.nix
   ];
 
+  programs.hyprshot = {
+    enable = true;
+    saveLocation = "$HOME/Pictures/Screenshots"; # TODO: screen shots are not saved here
+  };
+
   home.packages = with pkgs; [
     brightnessctl
     wl-clipboard
@@ -39,6 +44,7 @@ in
     settings = {
       "$terminal" = "alacritty";
       "$mod" = "SUPER";
+      "$shiftmod" = "SUPER SHIFT";
 
       bind = [
         # Starting programs
@@ -72,7 +78,14 @@ in
         # Display brightness
         ", XF86MonBrightnessUp, exec, brightnessctl s +5%"
         ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
-      ] ++ generatedBindings;
+
+        # Screenshot
+        ", PRINT, exec, hyprshot -m output -m active"
+        "$mod, PRINT, exec, hyprshot -m window -m active"
+        "$shiftmod, PRINT, exec, hyprshot -m region"
+
+      ]
+      ++ generatedBindings;
 
       general = {
         gaps_in = 2.5;
