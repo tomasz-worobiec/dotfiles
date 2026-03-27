@@ -13,8 +13,7 @@ let
     ws = builtins.toString (if key == 0 then 10 else key);
   };
 
-  allWsBindings = builtins.genList
-    (key: singleWsBindings (wsBindingsArgs key)) 10;
+  allWsBindings = builtins.genList (key: singleWsBindings (wsBindingsArgs key)) 10;
 
   generatedBindings = builtins.concatLists allWsBindings;
 in
@@ -86,7 +85,7 @@ in
       };
 
       input = {
-        kb_layout="pl";
+        kb_layout = "pl";
       };
     };
   };
