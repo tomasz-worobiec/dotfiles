@@ -20,63 +20,63 @@
     };
   };
 
-  outputs = {
-    disko,
-    home-manager,
-    nixpkgs,
-    nixpkgs-unstable,
-    stylix,
-    ...
-  }:
-  let
-    system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-    pkgs-unstable = import nixpkgs-unstable { inherit system; };
+  outputs =
+    {
+      disko,
+      home-manager,
+      nixpkgs,
+      nixpkgs-unstable,
+      stylix,
+      ...
+    }:
+    let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      pkgs-unstable = import nixpkgs-unstable { inherit system; };
 
-    colorScheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
+      colorScheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-medium.yaml";
 
-    mkConfiguration = hostname: {
-      "${hostname}" = nixpkgs.lib.nixosSystem {
-        modules = [
-          disko.nixosModules.disko
-          ./hosts/${hostname}/disk-config.nix
-          stylix.nixosModules.stylix
-          ./hosts/${hostname}/configuration.nix
-        ];
-        specialArgs = {
+      mkConfiguration = hostname: {
+        "${hostname}" = nixpkgs.lib.nixosSystem {
+          modules = [
+            disko.nixosModules.disko
+            ./hosts/${hostname}/disk-config.nix
+            stylix.nixosModules.stylix
+            ./hosts/${hostname}/configuration.nix
+          ];
+          specialArgs = {
+            inherit pkgs;
+            inherit pkgs-unstable;
+            inherit colorScheme;
+            inherit hostname;
+          };
+        };
+      };
+
+      mkHome = username: hostname: {
+        "${username}@${hostname}" = home-manager.lib.homeManagerConfiguration {
+          modules = [
+            stylix.homeModules.stylix
+            ./hosts/${hostname}/home.nix
+          ];
+          extraSpecialArgs = {
+            inherit colorScheme;
+            inherit pkgs-unstable;
+            inherit hostname;
+            inherit username;
+          };
           inherit pkgs;
-          inherit pkgs-unstable;
-          inherit colorScheme;
-          inherit hostname;
         };
       };
-    };
+    in
+    {
+      nixosConfigurations =
+        { } // (mkConfiguration "bison") // (mkConfiguration "lynx") // (mkConfiguration "redfox");
 
-    mkHome = username: hostname: {
-      "${username}@${hostname}" = home-manager.lib.homeManagerConfiguration {
-        modules = [
-          stylix.homeModules.stylix
-          ./hosts/${hostname}/home.nix
-        ];
-        extraSpecialArgs = {
-          inherit colorScheme;
-          inherit pkgs-unstable;
-          inherit hostname;
-          inherit username;
-        };
-        inherit pkgs;
-      };
+      homeConfigurations =
+        { } // (mkHome "tom" "bison") // (mkHome "tom" "lynx") // (mkHome "tom" "redfox");
     };
-  in
-  {
-    nixosConfigurations = {}
-      // (mkConfiguration "bison")
-      // (mkConfiguration "lynx")
-      // (mkConfiguration "redfox");
-
-    homeConfigurations = {}
-      // (mkHome "tom" "bison")
-      // (mkHome "tom" "lynx")
-      // (mkHome "tom" "redfox");
-  };
 }
