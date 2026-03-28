@@ -238,12 +238,28 @@
         "type": "github"
       }
     },
+    "resources": {
+      "locked": {
+        "lastModified": 1774788683,
+        "narHash": "sha256-e6+IyCAHRju6jFg1/OqZO1NAqwOaEiGUmdXC2n7bQNQ=",
+        "ref": "refs/heads/main",
+        "rev": "5bdbb4e3fa0e4e955aa0fafcbc244aaeadeab85c",
+        "revCount": 2,
+        "type": "git",
+        "url": "ssh://git@github.com/tomasz-worobiec/dotfiles-resources.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/tomasz-worobiec/dotfiles-resources.git"
+      }
+    },
     "root": {
       "inputs": {
         "disko": "disko",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "resources": "resources",
         "stylix": "stylix"
       }
     },

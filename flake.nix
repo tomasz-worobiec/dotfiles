@@ -18,6 +18,8 @@
       url = "github:danth/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    resources.url = "git+ssh://git@github.com/tomasz-worobiec/dotfiles-resources.git";
   };
 
   outputs =
@@ -26,6 +28,7 @@
       home-manager,
       nixpkgs,
       nixpkgs-unstable,
+      resources,
       stylix,
       ...
     }:
@@ -67,6 +70,7 @@
             inherit pkgs-unstable;
             inherit hostname;
             inherit username;
+            inherit resources;
           };
           inherit pkgs;
         };
