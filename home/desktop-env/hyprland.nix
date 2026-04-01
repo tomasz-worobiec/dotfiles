@@ -71,6 +71,12 @@ in
         "$mod, k, movefocus, u"
         "$mod, j, movefocus, d"
 
+        # Window movement
+        "$mod ALT, l, movewindow, r"
+        "$mod ALT, h, movewindow, l"
+        "$mod ALT, k, movewindow, u"
+        "$mod ALT, j, movewindow, d"
+
         # Workspace management
         "$mod, bracketleft, workspace, m-1"
         "$mod, bracketright, workspace, m+1"
