@@ -24,6 +24,15 @@
     };
   };
 
+  networking = {
+    firewall = {
+      allowedTCPPorts = [
+        57621 # spotify: Sync with devices in the same network
+        5353 # spotify: Allow discovery of Google Cast devices
+      ];
+    };
+  };
+
   services.pipewire.pulse.enable = true;
 
   environment.sessionVariables = {

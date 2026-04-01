@@ -21,6 +21,7 @@
   home.packages = with pkgs; [
     baobab
     kdePackages.okular
+    spotify
   ];
 
   stylix = {
