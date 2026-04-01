@@ -23,6 +23,7 @@
 
   home.packages = with pkgs; [
     e2fsprogs
+    zip
   ];
 
   home = {
