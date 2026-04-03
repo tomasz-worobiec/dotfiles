@@ -19,6 +19,7 @@
     lazygit.enable = true;
     ranger.enable = true;
     ripgrep.enable = true;
+    yazi.enable = true;
   };
 
   home.packages = with pkgs; [
