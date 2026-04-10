@@ -20,6 +20,7 @@
 
   home.packages = with pkgs; [
     baobab
+    gimp
     kdePackages.dolphin
     kdePackages.okular
     spotify
