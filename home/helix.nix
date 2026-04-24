@@ -59,6 +59,16 @@
         name = "typst";
         auto-format = true;
       }
+      {
+        name = "cpp";
+        auto-format = true;
+        language-servers = [ "clangd" ];
+      }
+      {
+        name = "c";
+        auto-format = true;
+        language-servers = [ "clangd" ];
+      }
     ];
 
     extraPackages = with pkgs; [
