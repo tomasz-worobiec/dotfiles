@@ -1,0 +1,70 @@
+{
+  pkgs,
+  ...
+}:
+{
+  programs.zellij = {
+    enable = true;
+    enableZshIntegration = true;
+
+    settings = {
+      pane_frames = false;
+      default_layout = "compact";
+
+      keybinds = {
+        "shared_except" = {
+          _args = [ "locked" ];
+
+          "bind \"Alt [\"" = {
+            GoToPreviousTab = [ ];
+          };
+          "bind \"Alt ]\"" = {
+            GoToNextTab = [ ];
+          };
+
+          "bind \"Alt Shift [\"" = {
+            MoveTab = [ "Left" ];
+          };
+          "bind \"Alt Shift ]\"" = {
+            MoveTab = [ "Right" ];
+          };
+
+          "bind \"Alt d\"" = {
+            Detach = [ ];
+          };
+
+          "bind \"Alt s\"" = {
+            NewPane = "Down";
+          };
+          "bind \"Alt v\"" = {
+            NewPane = "Right";
+          };
+
+          "bind \"Alt h\"" = {
+            MoveFocus = "Left";
+          };
+          "bind \"Alt j\"" = {
+            MoveFocus = "Down";
+          };
+          "bind \"Alt k\"" = {
+            MoveFocus = "Up";
+          };
+          "bind \"Alt l\"" = {
+            MoveFocus = "Right";
+          };
+
+          "bind \"Alt t\"" = {
+            NewTab = [ ];
+          };
+
+          "bind \"Alt x\"" = {
+            CloseFocus = [ ];
+          };
+          "bind \"Alt X\"" = {
+            CloseTab = [ ];
+          };
+        };
+      };
+    };
+  };
+}
