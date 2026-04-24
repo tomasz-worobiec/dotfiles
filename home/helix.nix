@@ -49,6 +49,14 @@
             ":open %sh{cat /tmp/unique-file}"
             ":redraw"
           ];
+
+          # LazyGit integration
+          "v" = [
+            ":new"
+            ":insert-output lazygit"
+            ":buffer-close!"
+            ":redraw"
+          ];
         };
       };
     };
@@ -85,6 +93,7 @@
       marksman
       nodePackages.bash-language-server
       yazi
+      lazygit
     ];
   };
 }
