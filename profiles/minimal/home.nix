@@ -6,7 +6,7 @@
 {
   imports = [
     ../../home/helix.nix
-    ../../home/tmux.nix
+    ../../home/zellij.nix
     ../../home/zsh.nix
   ];
 
