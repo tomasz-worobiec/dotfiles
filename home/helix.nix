@@ -40,6 +40,15 @@
           "j" = "jump_view_down";
           "k" = "jump_view_up";
           "l" = "jump_view_right";
+
+          # Yazi integration
+          "t" = [
+            ":sh rm -f /tmp/unique-file"
+            ":insert-output yazi \"%{buffer_name}\" --chooser-file=/tmp/unique-file"
+            ":sh printf \"\\x1b[?1049h\\x1b[?2004h\" > /dev/tty"
+            ":open %sh{cat /tmp/unique-file}"
+            ":redraw"
+          ];
         };
       };
     };
@@ -75,6 +84,7 @@
       nil
       marksman
       nodePackages.bash-language-server
+      yazi
     ];
   };
 }
