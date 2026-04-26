@@ -12,7 +12,7 @@
       default_layout = "compact";
 
       keybinds = {
-        "shared_except" = {
+        shared_except = {
           _args = [ "locked" ];
 
           "bind \"Alt [\"" = {
@@ -63,6 +63,21 @@
           "bind \"Alt X\"" = {
             CloseTab = [ ];
           };
+
+          "bind \"Alt f\"" = {
+            ToggleFloatingPanes = [ ];
+          };
+
+          "bind \"Alt +\"" = {
+            Resize = [ "Increase" ];
+          };
+          "bind \"Alt =\"" = {
+            Resize = [ "Increase" ];
+          };
+          "bind \"Alt -\"" = {
+            Resize = [ "Decrease" ];
+          };
+
         };
       };
     };
