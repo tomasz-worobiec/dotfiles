@@ -36,11 +36,6 @@
 
       keys.normal = {
         "space" = {
-          "h" = "jump_view_left";
-          "j" = "jump_view_down";
-          "k" = "jump_view_up";
-          "l" = "jump_view_right";
-
           # Yazi integration
           "t" = [
             ":sh rm -f /tmp/unique-file"
