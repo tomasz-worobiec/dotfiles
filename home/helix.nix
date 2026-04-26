@@ -52,6 +52,11 @@
             ":buffer-close!"
             ":redraw"
           ];
+
+          "w" = {
+            # Save buffer
+            "w" = ":w";
+          };
         };
       };
     };
