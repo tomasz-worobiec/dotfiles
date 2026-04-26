@@ -12,6 +12,10 @@
       default_layout = "compact";
 
       keybinds = {
+        _props = {
+          clear-defaults = true;
+        };
+
         shared_except = {
           _args = [ "locked" ];
 
