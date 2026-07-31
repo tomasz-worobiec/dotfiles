@@ -13,6 +13,7 @@
     git
     wget
     lshw
+    arp-scan
   ];
 
   programs = {
