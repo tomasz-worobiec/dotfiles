@@ -26,7 +26,10 @@
     users.tom = {
       isNormalUser = true;
       initialPassword = "";
-      extraGroups = [ "wheel" "networkmanager" ];
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+      ];
       useDefaultShell = true;
     };
   };
