@@ -1,0 +1,21 @@
+{
+  pkgs,
+  ...
+}:
+{
+  flake.nixosModules.tuigreet =
+    { pkgs, ... }:
+    {
+      services.greetd = {
+        enable = true;
+        settings.default_session = {
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland";
+          user = "tom";
+        };
+      };
+
+      environment.systemPackages = with pkgs; [
+        pkgs.greetd.tuigreet
+      ];
+    };
+}
