@@ -9,7 +9,7 @@
       imports = with config.flake; [
         profiles.minimal.nixos
         nixosModules.stylix
-        nixosModules.tuigreet
+        nixosModules.niri
       ];
 
       fonts.packages = with pkgs; [
@@ -49,13 +49,7 @@
       imports = with config.flake; [
         profiles.minimal.home
         homeModules.stylix
-        homeModules.swaync
-        homeModules.hyprpaper
-        homeModules.hypridle
-        homeModules.hyprlock
-        homeModules.rofi
-        homeModules.waybar
-        homeModules.hyprland
+        homeModules.niri
       ];
 
       programs = {
