@@ -1,7 +1,12 @@
+{ inputs, ... }:
 {
   flake.nixosModules.lynxDisk =
     { pkgs, ... }:
     {
+      imports = [
+        inputs.disko.nixosModules.default
+      ];
+
       disko.devices = {
         disk = {
           nvme0n1 = {
