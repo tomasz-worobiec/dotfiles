@@ -20,6 +20,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     resources.url = "git+ssh://git@github.com/tomasz-worobiec/dotfiles-resources.git";
   };
 
