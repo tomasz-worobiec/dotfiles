@@ -9,6 +9,7 @@
       imports = with config.flake; [
         nixosModules.nixpkgs
       ];
+
       boot.loader = {
         systemd-boot.enable = true;
         efi.canTouchEfiVariables = false;
@@ -39,6 +40,8 @@
           useDefaultShell = true;
         };
       };
+
+      nix.settings.trusted-users = [ "tom" ];
 
       services.openssh.enable = true;
 
