@@ -1,9 +1,4 @@
 {
-  pkgs,
-  lib,
-  ...
-}:
-{
   flake.homeModules.helix =
     { pkgs, ... }:
     {

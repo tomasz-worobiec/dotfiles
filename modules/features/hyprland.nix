@@ -1,24 +1,21 @@
 {
-  ...
-}:
-let
-  singleWsBindings = args: [
-    "$mod, ${args.key}, workspace, ${args.ws}"
-    "$mod SHIFT, ${args.key}, movetoworkspace, ${args.ws}"
-  ];
-
-  wsBindingsArgs = key: {
-    key = builtins.toString key;
-    ws = builtins.toString (if key == 0 then 10 else key);
-  };
-
-  allWsBindings = builtins.genList (key: singleWsBindings (wsBindingsArgs key)) 10;
-
-  generatedBindings = builtins.concatLists allWsBindings;
-in
-{
   flake.homeModules.hyprland =
     { pkgs, ... }:
+    let
+      singleWsBindings = args: [
+        "$mod, ${args.key}, workspace, ${args.ws}"
+        "$mod SHIFT, ${args.key}, movetoworkspace, ${args.ws}"
+      ];
+
+      wsBindingsArgs = key: {
+        key = builtins.toString key;
+        ws = builtins.toString (if key == 0 then 10 else key);
+      };
+
+      allWsBindings = builtins.genList (key: singleWsBindings (wsBindingsArgs key)) 10;
+
+      generatedBindings = builtins.concatLists allWsBindings;
+    in
     {
       programs.hyprshot = {
         enable = true;

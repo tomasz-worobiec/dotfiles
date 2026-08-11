@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   flake.homeModules.hyprlock =
     { pkgs, resources, ... }:
     {

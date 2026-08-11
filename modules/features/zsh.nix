@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   flake.homeModules.zsh =
     { pkgs, ... }:
     {

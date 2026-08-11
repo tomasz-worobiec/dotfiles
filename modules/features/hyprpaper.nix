@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   flake.homeModules.hyprpaper =
     { pkgs, resources, ... }:
     {

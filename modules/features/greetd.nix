@@ -1,8 +1,4 @@
 {
-  pkgs,
-  ...
-}:
-{
   flake.nixosModules.tuigreet =
     { pkgs, ... }:
     {
@@ -15,7 +11,7 @@
       };
 
       environment.systemPackages = with pkgs; [
-        pkgs.greetd.tuigreet
+        greetd.tuigreet
       ];
     };
 }

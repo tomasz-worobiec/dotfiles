@@ -1,7 +1,4 @@
 {
-  ...
-}:
-{
   flake.homeModules.waybar =
     { pkgs, ... }:
     {

@@ -1,8 +1,4 @@
 {
-  pkgs,
-  ...
-}:
-{
   flake.homeModules.swaync =
     { pkgs, ... }:
     {
