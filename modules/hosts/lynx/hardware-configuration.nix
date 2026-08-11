@@ -3,7 +3,13 @@
 # to /etc/nixos/configuration.nix instead.
 {
   flake.nixosModules.lynxHardware =
-    { pkgs, ... }:
+    {
+      pkgs,
+      config,
+      lib,
+      modulesPath,
+      ...
+    }:
     {
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
