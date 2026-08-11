@@ -25,6 +25,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    noctalia-greeter.url = "github:noctalia-dev/noctalia-greeter";
+
     resources.url = "git+ssh://git@github.com/tomasz-worobiec/dotfiles-resources.git";
   };
 
