@@ -12,6 +12,8 @@
         # nixosModules.redfoxDisk
       ];
 
+      hardware.graphics.enable = true;
+
       hardware.bluetooth = {
         enable = true;
       };
