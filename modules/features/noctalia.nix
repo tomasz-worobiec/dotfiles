@@ -30,6 +30,7 @@
               "volume"
               "brightness"
               "bluetooth"
+              "network"
               "battery"
               "control-center"
             ];
